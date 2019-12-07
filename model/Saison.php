@@ -33,9 +33,9 @@ class Saison
     /**
      * @param mixed $mois
      */
-    public function setMois($moins)
+    public function setMois($mois)
     {
         $this->mois = $mois;
     }
-
+}
     

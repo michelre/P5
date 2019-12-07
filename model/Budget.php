@@ -37,5 +37,5 @@ class Budget
     {
         $this->valeur = $valeur;
     }
-
+}
     

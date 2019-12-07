@@ -16,7 +16,10 @@ class FrontendController
 
     public function home()
     {
-        $posts = $this->formDao->findbudget();
+        $budgets = $this->formDao->findbudget();
+        $niveaux = $this->formDao->findniveau();
+        $saisons = $this->formDao->findsaison();
         
         include_once 'view/home.php';
     }
+}

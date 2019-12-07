@@ -20,3 +20,30 @@ class FormDao extends BaseDao
         }
         return $budgets;
     }
+
+       public function findniveau()
+    {
+        $req = $this->bd->query('SELECT * FROM niveaux');
+        $niveaux = [];
+        while ($donnees = $req->fetch()) {
+            $niveau = new Niveau();
+            $niveau->setId($donnees['id']);
+            $niveau->setValeur($donnees['valeur']);           
+            $niveaux[] = $niveau;
+        }
+        return $niveaux;
+    }
+
+       public function findsaison()
+    {
+        $req = $this->bd->query('SELECT * FROM saisons');
+        $saisons = [];
+        while ($donnees = $req->fetch()) {
+            $saison = new Saison();
+            $saison->setId($donnees['id']);
+            $saison->setMois($donnees['mois']);           
+            $saisons[] = $saison;
+        }
+        return $saisons;
+    }
+}

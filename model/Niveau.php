@@ -37,5 +37,5 @@ class Niveau
     {
         $this->valeur = $valeur;
     }
-
+}
     
