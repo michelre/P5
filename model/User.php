@@ -4,9 +4,8 @@
 class User
 {
 	private $id;
-    private $prenom;
-    private $nom;
-    private $email;
+    private $login;
+    private $password;
 
     /**
      * @return mixed
@@ -27,49 +26,32 @@ class User
     /**
      * @return mixed
      */
-    public function getPrenom()
+    public function getLogin()
     {
-        return $this->prenom;
+        return $this->login;
     }
 
     /**
-     * @param mixed $prenom
+     * @param mixed $login
      */
-    public function setPrenom($prenom)
+    public function setLogin($login)
     {
-        $this->prenom = $prenom;
+        $this->login = $login;
     }
 
     /**
      * @return mixed
      */
-    public function getNom()
+    public function getPassword()
     {
-        return $this->nom;
+        return $this->password;
     }
 
     /**
-     * @param mixed $nom
+     * @param mixed $password
      */
-    public function setNom($nom)
+    public function setPassword($password)
     {
-        $this->nom = $nom;
+        $this->password = $password;
     }
-
-     /**
-     * @return mixed
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-    }
-
 }

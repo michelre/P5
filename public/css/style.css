@@ -31,8 +31,6 @@ h2{
     font-family: monospace;
 }
 
-
-
 .title{
     text-align: center;
 }
@@ -61,41 +59,9 @@ h2{
     font-size: 1.2em;    
 }
 
-.titre-posts{
-    font-weight: bold;
-    padding: 10px;
-}
-
-.extrait-posts{
-    text-align:justify; 
-}
-
-.post{
-    text-align: justify;
-}
-
-.form-control {
-    margin-bottom: 15px;
-
-}
-
-
-.titre-bio{
-    font-weight: bold;
-    font-size: 2em;
-    padding: 10px;
-
-}
-
-.portrait{
-    width: 100%;
-}
-
-.biographie{
-    background-color: #EFEFEF;
-    overflow: hidden;
-    padding: 10px;
-    text-align: justify;
+/*POPUP*/
+#popup {
+  display: none;
 }
 
 footer {
@@ -103,8 +69,6 @@ footer {
     border-top: 1px solid #3399ff;
     text-align: center; 
 }
-
-
 
 @media screen and (min-width: 200px) and (max-width: 992px) {
  .style_texte {

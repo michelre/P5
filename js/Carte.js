@@ -1,6 +1,6 @@
 class Carte {
-  constructor(reservation) {
-    this.reservation = reservation
+  constructor() {
+   
     this.map = L.map("map", {
       center: [47.218371, -1.553621],
       zoom: 13,

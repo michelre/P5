@@ -50,89 +50,95 @@
 
 <div class="container">
 
-<h2>Formulaire</h2>
-	<div id="budgets">
-					<?php
-					foreach($budgets as $budget){
-						?>
-						<div class="budget"><?php echo $budget->getValeur();?></div>
-					<?php
-				}
-					?>
-	</div>
-
-	<div id="niveaux">
-					<?php
-					foreach($niveaux as $niveau){
-						?>
-						<div class="niveau"><?php echo $niveau->getValeur();?></div>
-					<?php
-				}
-					?>
-	</div>
-
-		<div id="saisons">
-					<?php
-					foreach($saisons as $saison){
-						?>
-						<div class="saison"><?php echo $saison->getMois();?></div>
-					<?php
-				}
-					?>
-	</div>
-<br>
+	<h2>Formulaire</h2>
+	
+	<br>
 	<form action="" method="post" enctype="text/plain">
-	  <label>Budget: <br>
+	  	<label>Budget: 
+	  <br>
 	  	<input type="radio" name="nom_variable_1" value="choix1"> 
-
-	  		Les fins de mois sont chauds, je veux dépenser le moins possible <br>
-	  	<input type="radio" name="nom_variable_1" value="choix2"> 
-	  		Mon père n'est pas Rothschild mais ça va j'ai un peu d'économie <br>
-	  	<input type="radio" name="nom_variable_1" value="choix3"> 
-	  		Je veux me faire plaisir <br>
-	  </label>
-<br>
-	  <label>Niveau: <br>
+			<?php
+				foreach($budgets as $budget){
+			?>
+			<div class="budget"><?php echo $budget->getValeur();?></div>
+			<?php
+				}
+			?>
+		<br>	  	
+	  	</label>
+		<br>
+	  	<label>Niveau: 
+	  	<br>
 	  	<input type="radio" name="nom_variable_1" value="choix1"> 
-	  		Débutant <br>
-	  	<input type="radio" name="nom_variable_1" value="choix2"> 
-	  		Intermédiaire <br>
-	  	<input type="radio" name="nom_variable_1" value="choix3"> 
-	  		Expert <br>
-	  </label>
+	  		<?php
+				foreach($niveaux as $niveau){
+			?>
+			<div class="niveau"><?php echo $niveau->getValeur();?></div>
+			<?php
+				}
+			?> 
+		<br>	  
+	  	</label>
 	  	<br> 
-	  	<label>Saison: <br>
+	  	<label>Saison:
+	  	<br>
 	  	<input type="radio" name="nom_variable_1" value="choix1"> 
-	  		Janvier <br>
-	  	<input type="radio" name="nom_variable_1" value="choix2"> 
-	  		Février <br>
-	  	<input type="radio" name="nom_variable_1" value="choix3"> 
-	  		Mars <br>
-	  </label>
+	  		<?php
+				foreach($saisons as $saison){
+			?>
+			<div class="saison"><?php echo $saison->getMois();?></div>
+				<?php
+				}
+			?> 
+			<br>	  	
+	  	</label>
 	  	<br> 
-	  <button type="submit" value="BouttonSubmit" name="expedier email">Voir la destination</button>
+	  	<button type="submit" value="BouttonSubmit" name="expedier email"><a href="javascript:showPopup();" title="Montrer le popup">Voir la destination</a></button>
+	</form>
+</div>
+	<br>
+<div id="popup">
+	Inscrivez vous pour voir le résultat
+	<form action="*" method="post">
+	    <div>
+	        <label for="prenom">Prénom :</label>
+	        <input type="text" id="prenom" name="prenom">
+	    </div>
 
+	     <div>
+	        <label for="nom">Nom :</label>
+	        <input type="text" id="nom" name="nom">
+	    </div>
+
+	    <div>
+	        <label for="email">e-mail :</label>
+	        <input type="email" id="email" name="email">
+	    </div>
+		<div class="button">
+	        <button type="submit">Envoyer le message</button>
+	    </div>
 	</form>
 </div>
 
 <div class="container">
 
-<div id="map"></div>
+	<div id="map"></div>
 
-<h2>Carte</h2>	
-	<br> 
-	 <img class="img-fluid" src="public/images/map.png" alt="map">
+	<h2>Carte</h2>	
+		<br> 
+		 <img class="img-fluid" src="public/images/map.png" alt="map">
 </div>
 
 <footer>
 		<p><a href="http://voyagesetsurf.com/"> 2019 Voyages et Surf</a> -
 			<a href="index.php?action=login">Espace Administrateur</a>
 		</p>
-	</footer>
+</footer>
 
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/leaflet.js"></script>
 <script src="js/lib/leaflet-gesture-handling.min.js"></script>
+<script src="js/Popup.js"></script>
 <script src="js/Carte.js"></script>
 <script src="js/index.js"></script>
 
