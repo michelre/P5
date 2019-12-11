@@ -4,17 +4,19 @@ namespace App\Controller;
 
 use App\Dao\FormDao;
 use App\Dao\UserDao;
+use App\Dao\CustomerDao;
 
 class FrontendController
 {
     private $formDao;
     private $userDao;
-
+    private $customerDao;
 
     public function __construct()
     {
         $this->formDao = new FormDao();
         $this->userDao = new UserDao();
+        $this->customerDao = new CustomerDao();
     }
 
     public function home()
@@ -27,6 +29,12 @@ class FrontendController
         include_once __DIR__ . '/../view/home.php';
     }
 
+    public function createCustomerAction($prenom, $nom, $email)
+    {
+        $this->customerDao->createcustomer($prenom, $nom, $email);
+        header('Location:/');
+    }
+    
     public function login()
     {
         include_once __DIR__ . '/../view/login.php';

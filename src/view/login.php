@@ -11,7 +11,7 @@
 <body>
 
 <div class="container">
-    <form class="login form" action="index.php?action=login_action" method="post">
+    <form class="login form" action="/admin" method="post">
         <div class="form-group">
             <label>Login:</label>
             <input type="text" name="login" class="form-control" required/>

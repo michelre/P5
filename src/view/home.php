@@ -91,9 +91,7 @@
             <br>
         </label>
         <br>
-        <button type="button" value="BouttonSubmit"data-toggle="modal" data-target="#subscribeCustomer" name="expedier email"><a href="javascript:showPopup();"
-                                                                             title="Montrer le popup">Voir la
-                destination</a>
+        <button type="button" value="BouttonSubmit"data-toggle="modal" data-target="#subscribeCustomer" name="expedier email"><a href="javascript:showPopup();" title="Montrer le popup">Voir la destination</a>
         </button>
     </form>
 </div>
@@ -103,14 +101,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+
+                <h5 class="modal-title" id="exampleModalLabel">Incrivez vous pour voir le résultat</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                Inscrivez vous pour voir le résultat
-                <form action="*" method="post">
+                <form action="/createcustomeraction" method="POST">
                     <div>
                         <label for="prenom">Prénom :</label>
                         <input type="text" id="prenom" name="prenom">
@@ -125,15 +123,14 @@
                         <label for="email">e-mail :</label>
                         <input type="email" id="email" name="email">
                     </div>
-                    <div class="button">
-                        <button type="submit">Envoyer le message</button>
-                    </div>
-                </form>
+                    
+                
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="submit" class="btn btn-primary">Voir le résultat</button>
             </div>
+            </form>
         </div>
     </div>
 </div>
