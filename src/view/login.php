@@ -8,6 +8,24 @@
     <link href="/public/css/style.css" rel="stylesheet">
     <title>Login</title>
 </head>
+<header>
+    <div class="row">
+        <nav class="navbar">
+            <div class="title col-lg-6">
+                <a href="http://voyagesetsurf.com/"><img class="img-fluid" src="/public/images/logo.png" alt="logo"></a>
+            </div>
+            <div class="dropdown col-lg-6 col-xs-1">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Menu
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/">Accueil</a>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
 <body>
 
 <div class="container">
@@ -24,7 +42,12 @@
 
     </form>
 </div>
-
+<br>
+<footer>
+    <p><a href="http://voyagesetsurf.com/"> 2019 Voyages et Surf</a> -
+        <a href="/login">Espace Administrateur</a>
+    </p>
+</footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

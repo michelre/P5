@@ -39,7 +39,6 @@ $klein->respond('GET', '/public/[*]', function ($request, $response) {
     $response->header('Content-Type', $mimeType);
     return file_get_contents($file);
 });
-
 $klein->dispatch();
 /*function checkAuthentication()
 {

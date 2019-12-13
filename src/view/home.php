@@ -19,7 +19,7 @@
             <div class="title col-lg-6">
                 <a href="http://voyagesetsurf.com/"><img class="img-fluid" src="/public/images/logo.png" alt="logo"></a>
             </div>
-            <div class="dropdown col-lg-6 col-xs-1">
+            <div class="dropdown col-lg-6 ">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                     Menu
                 </button>
@@ -71,7 +71,7 @@
             <?php
             foreach ($niveaux as $niveau) {
                 ?>
-                <div class="niveau"><?php echo $niveau->getValeur(); ?></div>
+                <div class="niveau"><?php echo $niveau->getValeur([$niveaux=1])?></div>
                 <?php
             }
             ?>
@@ -102,7 +102,7 @@
         <div class="modal-content">
             <div class="modal-header">
 
-                <h5 class="modal-title" id="exampleModalLabel">Incrivez vous pour voir le résultat</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Inscris toi pour voir le résultat</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -110,17 +110,17 @@
             <div class="modal-body">
                 <form action="/createcustomeraction" method="POST">
                     <div>
-                        <label for="prenom">Prénom :</label>
+                        <label class="form-body" for="prenom">Prénom :</label>
                         <input type="text" id="prenom" name="prenom">
                     </div>
 
                     <div>
-                        <label for="nom">Nom :</label>
+                        <label class="form-body" for="nom">Nom:</label>
                         <input type="text" id="nom" name="nom">
                     </div>
 
                     <div>
-                        <label for="email">e-mail :</label>
+                        <label class="form-body" for="email">E-mail :</label>
                         <input type="email" id="email" name="email">
                     </div>
                     
@@ -136,12 +136,9 @@
 </div>
 
 <div class="container">
-
+    <h2>Voici les destinations surf faites pour toi</h2>
     <div id="map"></div>
-
-    <h2>Carte</h2>
-    <br>
-    <img class="img-fluid" src="/public/images/map.png" alt="map">
+ 
 </div>
 
 <footer>

@@ -1,5 +1,5 @@
 body{
-    padding-top: 70px;
+    padding-top: 100px;
 }
 
 .container {
@@ -16,6 +16,8 @@ h1{
 h2{
     padding:20px;
 }
+
+
 
 .navbar{
     position: fixed;
@@ -59,10 +61,16 @@ h2{
     font-size: 1.2em;
 }
 
-/*POPUP*/
+.form-body
+{
+  
+  width: 70px;
+  
+}
+/*POPUP
 #popup {
   display: none;
-}
+}*/
 
 footer {
     height: 50px;
