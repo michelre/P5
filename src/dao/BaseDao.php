@@ -12,7 +12,7 @@ class BaseDao {
 	    {
 			try
 			{
-			    $this->bd = new PDO('mysql:host=localhost;dbname=p5;charset=utf8', 'root', '');
+			    $this->bd = new PDO('mysql:host=localhost;dbname=p5fabien;charset=utf8', 'root', 'root');
 			}
 			catch(Exception $e)
 			{

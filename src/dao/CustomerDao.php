@@ -24,7 +24,7 @@ class CustomerDao extends BaseDao
 
     public function createcustomer($prenom, $nom, $email)
     {
-        $statement = $this->bd->prepare("INSERT INTO customers(prenom,nom,email) VALUES(:prenom, :nom, :email");
+        $statement = $this->bd->prepare("INSERT INTO customers(prenom, nom, email) VALUES(:prenom, :nom, :email)");
         $statement->bindParam(':prenom', $prenom);
         $statement->bindParam(':nom', $nom);
         $statement->bindParam(':email', $email);
