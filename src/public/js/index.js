@@ -3,7 +3,8 @@ window.addEventListener('load', function () {
   let carte = null;
 
 
-  $('#create-customer button[type="submit"]').on('click', function (e) {
+  $('#create-customer').on('submit', function (e) {
+
     e.preventDefault();
     const formData = {
       prenom: $('input[name="prenom"]').val(),

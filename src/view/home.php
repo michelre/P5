@@ -118,18 +118,18 @@
                 <form id="create-customer" action="#" method="POST">
                     <div class="modal-body">
                         <div>
-                            <label class="form-body" for="prenom">Prénom :</label>
-                            <input type="text" id="prenom" name="prenom">
+                            <label class="form-body" for="prenom">Prénom *:</label>
+                            <input type="text" id="prenom" name="prenom" required>
                         </div>
 
                         <div>
-                            <label class="form-body" for="nom">Nom:</label>
-                            <input type="text" id="nom" name="nom">
+                            <label class="form-body" for="nom">Nom *:</label>
+                            <input type="text" id="nom" name="nom" required>
                         </div>
 
                         <div>
-                            <label class="form-body" for="email">E-mail :</label>
-                            <input type="email" id="email" name="email">
+                            <label class="form-body" for="email">E-mail *:</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
 
 
